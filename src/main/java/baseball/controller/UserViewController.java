@@ -33,7 +33,24 @@ public class UserViewController {
         if(inputValidService.isInputValid(input)){
             String res = service.judgement(input, getRandomPicks());
             JUDGEMENT_MESSAGE(res);
-            
+            if(inputValidService.isStrikeAll()){
+                continueOrEndGame();
+            }
+        }else{
+            EXCEPTION_MESSAGE();
+        }
+    }
+
+    private void continueOrEndGame(){
+        END_GAME_MESSAGE();
+        String ctn = Console.readLine();
+        if(inputValidService.isInputValid(ctn)){
+            if(inputValidService.continueOrEndGame(ctn)){
+                String newInput = Console.readLine();
+                userInput(newInput);
+            }else{
+                System.out.println();
+            }
         }else{
             EXCEPTION_MESSAGE();
         }

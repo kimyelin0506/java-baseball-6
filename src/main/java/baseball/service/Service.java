@@ -43,4 +43,6 @@ public class Service {
     private void strikeAll(){
         inputValidService.updateStatus();
     }
+
+
 }

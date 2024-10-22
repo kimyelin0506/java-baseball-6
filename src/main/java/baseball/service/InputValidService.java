@@ -20,10 +20,6 @@ public class InputValidService {
         return false;
     }
 
-    public boolean isEndGame(){
-        return endGame;
-    }
-
     public void updateStatus(){
         this.endGame = !endGame;
     }
@@ -38,5 +34,9 @@ public class InputValidService {
                 return false;
         }
         return false;
+    }
+
+    public boolean isStrikeAll(){
+        return endGame;
     }
 }
