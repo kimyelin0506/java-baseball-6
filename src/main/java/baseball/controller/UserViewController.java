@@ -27,17 +27,21 @@ public class UserViewController {
         randomPickData = new RandomPickData();
         userInputData = new UserInputData();
         userInputData.setStr(str);
-        String input = getInput();
 
         //입력값의 유효성 판단
-        if(inputValidService.isInputValid(input)){
-            String res = service.judgement(input, getRandomPicks());
-            JUDGEMENT_MESSAGE(res);
+        while(inputValidService.isStrikeAll()){
+            String input = getInput();
+            if(inputValidService.isInputValid(input)){
+                String res = service.judgement(input, getRandomPicks());
+                JUDGEMENT_MESSAGE(res);
+            }else{
+                EXCEPTION_MESSAGE(); break;
+            }
             if(inputValidService.isStrikeAll()){
                 continueOrEndGame();
+                break;
             }
-        }else{
-            EXCEPTION_MESSAGE();
+            userInputData.setStr(Console.readLine());
         }
     }
 

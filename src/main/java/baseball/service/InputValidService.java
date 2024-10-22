@@ -7,14 +7,15 @@ public class InputValidService {
         //게임이 안끝났을 경우
         if(!endGame){
             for(int i=0; i<str.length(); i++){
-                int target = Integer.parseInt(String.valueOf(str.charAt(i)));
-                if(target <=0 || target >9){
+                char target = str.charAt(i);
+                if(target < 48 || target > 57){
                     return false;
                 }
-                return true;
             }
+            return true;
         }
-        if(Integer.parseInt(str) == 1 || Integer.parseInt(str) == 2){
+
+        if(str.charAt(0) == 49 || str.charAt(0) == 50){
             return true;
         }
         return false;
