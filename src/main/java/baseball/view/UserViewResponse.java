@@ -3,7 +3,7 @@ package baseball.view;
 public class UserViewResponse {
 
     //(1) 입력한 숫자에 따른 결과 화면 띄우기
-    static final public void INPUT_MESSAGE(String res){
+    static final public void JUDGEMENT_MESSAGE(String res){
         System.out.println(res);
     }
 
