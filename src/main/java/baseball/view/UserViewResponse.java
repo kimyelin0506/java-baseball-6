@@ -21,7 +21,7 @@ public class UserViewResponse {
 
     //(4) 게임 시작 문구 출력 "숫자 야구 게임을 시작합니다"
     static final public void START_GAME_MESSAGE(){
-        System.out.println("숫자 야구 게임을 시작합니다.");
+        System.out.print("숫자 야구 게임을 시작합니다.");
     }
 
 }

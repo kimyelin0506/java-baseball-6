@@ -1,6 +1,7 @@
 package baseball;
 
 import baseball.controller.UserViewController;
+import camp.nextstep.edu.missionutils.Console;
 
 
 public class Application {
@@ -8,6 +9,7 @@ public class Application {
         // TODO: 프로그램 구현
         UserViewController userViewController = new UserViewController();
         userViewController.start();
-
+        String str = Console.readLine();
+        userViewController.userInput(str);
     }
 }

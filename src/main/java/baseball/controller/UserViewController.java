@@ -14,5 +14,7 @@ public class UserViewController {
     public void userInput(String str){
         userInputData = new UserInputData();
         userInputData.setStr(str);
+        //입력값의 유효성 판단
+
     }
 }
