@@ -30,14 +30,15 @@ public class Service {
     }
 
     private String result(int strike, int ball){
-        String res = new String();
+        String res = "낫싱";
         if(strike > 0){
-            res += String.valueOf(strike)+"스트라이크 ";
+            res = String.valueOf(strike)+"스트라이크 ";
         }
         else if(ball > 0){
-           return res += String.valueOf(ball)+"볼 ";
+           res += String.valueOf(ball)+"볼 ";
+           return res;
         }
-        return "낫싱";
+        return res;
     }
 
     private void strikeAll(){
