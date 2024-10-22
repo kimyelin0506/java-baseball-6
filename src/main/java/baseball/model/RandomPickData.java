@@ -15,7 +15,12 @@ public class RandomPickData {
     }
 
     private String randomPick(){
-        return String.valueOf(Randoms.pickNumberInRange(1,9));
+        while(true){
+            int random = Randoms.pickNumberInRange(1,9);
+            if(!randomList.contains(random)){
+                return String.valueOf(random);
+            }
+        }
     }
 
     public List<String> getRandomList(){
